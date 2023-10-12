@@ -20,7 +20,7 @@ export type FindAllProductsFacadeOutput = Array<{
     updatedAt: Date 
 }>
 
-export interface ProductFacadeInterface {
+export interface ProductStoreCatalogFacadeInterface {
     findProduct(input: FindProductFacadeInput): Promise<FindProductFacadeOutput>
     findAllProducts(): Promise<FindAllProductsFacadeOutput>
 }

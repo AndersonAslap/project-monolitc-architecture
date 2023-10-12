@@ -15,8 +15,14 @@ export class ProductModel extends Model {
     @Column({ allowNull: false, type: 'string' })
     declare description: string
 
+    @Column({ allowNull: true, type: 'number' })
+    declare purchasePrice: number
+
     @Column({ allowNull: false, type: 'number' })
     declare salesPrice: number
+
+    @Column({ allowNull: true, type: 'number' })
+    declare stock: number
 
     @Column({ allowNull: false, type:'timestamp' })
     declare createdAt: Date

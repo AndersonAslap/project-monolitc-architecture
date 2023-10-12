@@ -1,7 +1,7 @@
-import { FindAllProductsFacadeOutput, FindProductFacadeInput, FindProductFacadeOutput, ProductFacadeInterface } from "../../application/facade/ProductFacadeInterface";
+import { FindAllProductsFacadeOutput, FindProductFacadeInput, FindProductFacadeOutput, ProductStoreCatalogFacadeInterface } from "../../application/facade/ProductFacadeInterface";
 import { ProductUseCaseFactory } from "../factory/ProductUseCaseFactory";
 
-export class ProductFacade implements ProductFacadeInterface {
+export class ProductFacade implements ProductStoreCatalogFacadeInterface {
     
     constructor(readonly productUsecaseFactory: ProductUseCaseFactory){}
 

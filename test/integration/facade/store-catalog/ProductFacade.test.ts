@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize-typescript"
 import { Id } from "../../../../src/modules/@shared/domain/value-object/Id"
 import { ProductModel } from "../../../../src/modules/store-catalog/infra/repository/sequelize/ProductModel"
-import { ProductFacadeFactory } from "../../../../src/modules/store-catalog/infra/factory/ProductFacadeFactory"
 import { Product } from "../../../../src/modules/store-catalog/domain/Product"
+import { ProductStoreCatalogFacadeFactory } from "../../../../src/modules/store-catalog/infra/factory/ProductFacadeFactory"
 
 describe("ProductFacade test", () => {
     let sequelize: Sequelize
@@ -23,7 +23,7 @@ describe("ProductFacade test", () => {
     })
 
     it("should find a product", async () => {
-        const productFacade = ProductFacadeFactory.create()
+        const productFacade = ProductStoreCatalogFacadeFactory.create()
         const product = new Product({
             id: new Id(),
             name: 'computador',
@@ -44,7 +44,7 @@ describe("ProductFacade test", () => {
     })
 
     it("should find all products", async () => {
-        const productFacade = ProductFacadeFactory.create()
+        const productFacade = ProductStoreCatalogFacadeFactory.create()
         const product = new Product({
             id: new Id(),
             name: 'computador',

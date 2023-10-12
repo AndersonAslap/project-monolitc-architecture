@@ -14,7 +14,7 @@ export type GenerateInvoiceFacadeInput = {
 }
 
 export type GenerateInvoiceFacadeOutput = {
-    id: string
+    invoiceId: string
     name: string
     document: string
     street: string

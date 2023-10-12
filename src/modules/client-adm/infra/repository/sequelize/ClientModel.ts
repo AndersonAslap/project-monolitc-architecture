@@ -16,6 +16,9 @@ export class ClientModel extends Model {
     declare email: string
 
     @Column({ allowNull: false, type: 'string' })
+    declare document: string
+
+    @Column({ allowNull: false, type: 'string' })
     declare street: string
 
     @Column({ allowNull: false, type: 'number' })

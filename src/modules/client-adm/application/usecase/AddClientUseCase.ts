@@ -9,7 +9,7 @@ export class AddClientUseCase implements UseCase {
     
     async execute(input: Input): Promise<void> {
         const address = new Address(input.address.street, input.address.number, input.address.complement, input.address.city, input.address.state, input.address.zip)
-        const client = new Client({name: input.name, email:input.email, address})
+        const client = new Client({name: input.name, email:input.email, document: input.document, address})
         await this.clientRepository.add(client)
     }
 }
@@ -17,6 +17,7 @@ export class AddClientUseCase implements UseCase {
 type Input = {
     name: string
     email: string
+    document: string
     address: {
         street: string
         number: number

@@ -1,7 +1,7 @@
-import { AggregateRoot } from "../../@shared/domain/entity/AggregateRoot";
-import { BaseEntity } from "../../@shared/domain/entity/BaseEntity";
-import { Address } from "../../@shared/domain/value-object/Address";
-import { Id } from "../../@shared/domain/value-object/Id";
+import { AggregateRoot } from "../../@shared/domain/entity/AggregateRoot"
+import { BaseEntity } from "../../@shared/domain/entity/BaseEntity"
+import { Address } from "../../@shared/domain/value-object/Address"
+import { Id } from "../../@shared/domain/value-object/Id"
 
 type Props = {
     id?: Id
@@ -20,7 +20,7 @@ export class Client extends BaseEntity implements AggregateRoot {
     private _document: string
     private _address: Address
 
-    constructor(props: Props){
+    constructor(props: Props) {
         super(props)
         this._name = props.name
         this._email = props.email

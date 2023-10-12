@@ -11,6 +11,7 @@ export class ClientRepositoryDatabase implements ClientGateway {
             id: client.id.value,
             name: client.name,
             email: client.email,
+            document: client.document,
             street: client.address.street,
             number: client.address.number,
             complement: client.address.complement,
@@ -29,6 +30,7 @@ export class ClientRepositoryDatabase implements ClientGateway {
             id: new Id(client?.id),
             name: client?.name,
             email: client?.email,
+            document: client?.document,
             address: new Address(client?.street, client?.number, client?.complement, client?.city, client?.state, client?.zip),
             createdAt: client.createdAt,
             updatedAt: client.updatedAt

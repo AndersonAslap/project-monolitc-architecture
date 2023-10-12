@@ -11,6 +11,7 @@ export class ProductRepositoryDatabase implements ProductGateway {
             name: product.name,
             description: product.description,
             purchasePrice: product.purchasePrice,
+            salesPrice: product.salesPrice,
             stock: product.stock,
             createdAt: product.createdAt,
             updatedAt: product.updatedAt
@@ -25,6 +26,7 @@ export class ProductRepositoryDatabase implements ProductGateway {
             name: productData.name,
             description: productData.description,
             purchasePrice: productData.purchasePrice,
+            salesPrice: productData.salesPrice,
             stock: productData.stock,
             createdAt: productData.createdAt,
             updatedAt: productData.updatedAt
